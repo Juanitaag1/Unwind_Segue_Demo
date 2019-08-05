@@ -1,25 +1,27 @@
 //
-//  SecondViewController.swift
+//  FourthViewController.swift
 //  Unwind_Segue_Demo
 //
-//  Created by juanita aguilar on 7/31/19.
+//  Created by juanita aguilar on 8/5/19.
 //  Copyright © 2019 none. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class FourthViewController: UIViewController {
+    
+    var textToSend = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    @IBAction func unwindToVC2(segue: UIStoryboardSegue){
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
         
     }
+    
+
     /*
     // MARK: - Navigation
 
