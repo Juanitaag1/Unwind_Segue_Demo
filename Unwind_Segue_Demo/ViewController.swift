@@ -16,13 +16,22 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var textToChangeLabel: UILabel!
+    
+    
+    @IBOutlet weak var TextToChangeViaSSBVC: UILabel!
     //is the action that you first need to add in in the first step of the undwind then add code to get the info from the sending(source) ViewController
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
      if segue.source is ThirdViewController  {
         if let sourceSegue = segue.source as? ThirdViewController {
             self.textToChangeLabel.text = sourceSegue.textToSend//"Came from B = B->A , B exited"
+         }
+    }
+        //Check if the source segue ViewController is the secondVc
+    if segue.source is SecondSBVC1ViewController{
+            if let sourceSegue = segue.source as? SecondSBVC1ViewController{
+                self.TextToChangeViaSSBVC.text = sourceSegue.sendToMainSBVC
+            }
         }
-      }
     }
 }
 
